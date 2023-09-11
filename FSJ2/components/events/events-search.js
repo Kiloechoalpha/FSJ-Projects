@@ -16,7 +16,7 @@ export default function EventSearch (props) {
     }
 
     return(
-
+   
         <form className={classes.form} onSubmit={submitHandler}>
             <div className={classes.controls}>
                 <div className={classes.control}>

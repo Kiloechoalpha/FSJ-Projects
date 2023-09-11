@@ -7,7 +7,6 @@ import Button from "@/components/ui/button";
 import ErrorAlert from "@/components/ui/error-alert/error-alert";
 
 
-
 export default function FilteredEventsPage () {
 
     const router = useRouter();

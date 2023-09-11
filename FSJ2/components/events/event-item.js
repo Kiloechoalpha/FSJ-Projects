@@ -10,6 +10,7 @@ export default function EventItem(props) {
 
     const { title, image, date, location, id} =props;
 
+   
     const humaReadableDate = new Date(date).toLocaleDateString('en-US', {
         day: "numeric",
         month: "long",
