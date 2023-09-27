@@ -75,6 +75,7 @@ function FilteredEventsPage(props) {
     numMonth < 1 ||
     numMonth > 12 ||
     error
+  
   ) {
     return (
       <Fragment>

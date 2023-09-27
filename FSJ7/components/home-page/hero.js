@@ -6,7 +6,7 @@ function Hero() {
   return (
     <section className={classes.hero}>
       
-      <div className={classes.images}>
+      <div className={classes.image}>
         <Image
           src="/images/site/bk.png"
           alt="kiloechoalpha"

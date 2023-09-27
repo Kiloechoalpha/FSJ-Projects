@@ -1,26 +1,55 @@
-import classes from './contact-form.module.css';
-function ContactForm() {
-return < section className={classes.contact}>
-    <h1>How can I help you?</h1>
-    <form className={classes.form}>
-        <div  className={classes.controls}>
-        <div  className={classes.control}>
-            <label htmlFor='email'>Your Email</label>
-            <input type='email' id='mail' required/> 
-        </div>
-        <div  className={classes.control}>
-            <label htmlFor='name'>Your Name</label>
-            <input type='text' id='name' required/> 
-        </div>
-        </div>
-        <div  className={classes.control}>
-            <label htmlFor="message">Your Message</label>
-            <textarea id='message' rows='5'></textarea> 
-        </div>
-        <div  className={classes.control}>
-            <button htmlFor="email">Send Message</button>
-        </div>
-    </form>
-</section>
+import ReactMarkdown from "react-markdown";
+import Image from "next/image";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+
+import PostHeader from "./post-header";
+import classes from "./post-content.module.css";
+
+function PostContent(props) {
+  const { post } = props;
+  const imagePath = `/images/posts/${post.slug}/${post.image}`;
+
+  const customRenderers = {
+    p(paragraph) {
+      const { node } = paragraph;
+      
+      if (node.children[0].tagName === 'img') {
+        const image = node.children[0];
+
+        return (
+          <div className={classes.image}>
+            <Image
+              src={`/images/posts/${post.slug}/${image.properties.src}`}
+              alt={image.alt}
+              width={600}
+              height={300}
+            />
+          </div>
+        );
+      }
+      return <p>{paragraph.children}</p>;
+    },
+    
+    code(code) {
+      const { className, children } = code;
+      const language = className.split('-')[1]; // className is something like language-js => We need the "js" part here
+      return (
+        <SyntaxHighlighter
+          style={atomDark}
+          language={language}
+          children={children}
+        />
+      );
+    },
+  };
+
+  return (
+    <article className={classes.content}>
+      <PostHeader title={post.title} image={imagePath} />
+      <ReactMarkdown renderers={customRenderers}>{post.content}</ReactMarkdown>
+    </article>
+  );
 }
-export default ContactForm;
+
+export default PostContent;
