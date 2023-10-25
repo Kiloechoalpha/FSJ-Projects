@@ -14,9 +14,9 @@ function Hero() {
           height={300}
         />
       </div>
-      <h1>Hi, I am Kea</h1>
+      <h1>Hi, I am Kiloechoalpha</h1>
       <p>
-        I blog about web development - especially frontend frameworks React.
+      I am passionate about video games and regularly share my insights, experiences, and thoughts on various gaming titles through my blog.
       </p>
     </section>
   );

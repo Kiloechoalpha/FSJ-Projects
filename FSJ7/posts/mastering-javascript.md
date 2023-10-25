@@ -1,11 +1,10 @@
 ---
-title:  Riding into the Sunset: The Endless Adventures of Red Dead Redemption'
-date: '2023-10-01'
-image: RDR2.png
-excerpt:Red Dead Redemption is an open world wild west game.
+title:  The Endless Adventures of Red Dead Redemption
+excerpt: Red Dead Redemption is an open world wild west game
+image: rdr2.png
 isFeatured: true
+date: '2021-10-30'
 ---
-
 
 ## Introduction:
 
@@ -36,6 +35,6 @@ In addition to its captivating single-player campaign, Red Dead Redemption offer
 Red Dead Redemption is more than just a game; it's an experience that transports players to a bygone era of outlaws, lawmen, and untamed wilderness. Its rich narrative, unforgettable characters, and stunning open world have solidified its status as a gaming classic. Whether you're a seasoned cowboy or a newcomer looking to experience the Old West for the first time, Red Dead Redemption promises a wild ride full of adventure, intrigue, and heart. So, saddle up, don your cowboy hat, and ride into the sunset—it's time to explore the wild, untamed frontier once more.
 
 
-
+```
 
 Learn more about it [here](https://academind.com).
